@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scofield | Brevemente</title>
+    <title>Scofield | Teckel</title>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
@@ -11,22 +14,97 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="coming-soon-bg"></div>
+<div class="blob"></div>
+<div id="copy-toast">Código copiado com sucesso! 🐾</div>
 
-<div class="coming-soon-container">
-    <img src="logo.png" alt="Scofield" class="coming-logo">
-    <h1>Brevemente...</h1>
-    <p>O Teckel mais digital de Portugal está quase pronto para te conhecer!</p>
-    
-    <div class="social-row">
-        <a href="https://instagram.com/scofield_teckel" target="_blank" class="social-btn">
-            Instagram
+<div class="main-card">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="profile-section">
+            <div class="avatar-container">
+                <img src="img/logo.png" alt="Scofield" class="avatar-img">
+                <div class="status-dot"></div>
+            </div>
+
+            <h1></h1>
+            <p class="subtitle">🐣 03/02/2025<br>
+                🐾 Corridas de patas curtas e sestas peludas<br>
+                💗 Apaixonado por comida, sempre com um plano de fuga para o próximo snack<br></p>
+            <p>🏠 Portugal</p>
+
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content-area">
+
+        <!-- Instagram Bar -->
+        <a href="https://instagram.com/scofield_teckel" target="_blank" class="instagram-bar">
+            <div class="ig-left">
+                <i data-lucide="instagram" size="24"></i>
+                <span>Segue-me no Instagram
+                    <br>** 1.9k seguidores **</span>
+            </div>
+            <i data-lucide="external-link" size="20"></i>
         </a>
-    </div>
+
+        <section class="blog-section">
+            <h2 class="blog-title">AS MINHAS ESCOLHAS:</h2>
+            <div class="links-grid">
+                <a href="https://onelink.shein.com/29/5fsqcp1jtabn" target="_blank" class="link-item">
+                    <i data-lucide="shopping-bag" size="32"></i>
+                    <span>SHEIN</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Coupon Section
+         <h2 class="blog-title">PARCERIAS:</h2>
+        <section class="coupon-card">
+            <div class="coupon-header">
+                <i data-lucide="ticket" size="18"></i>
+                <span>
+                    Parceria Oficial
+                    <a href="https://petpatu.com" target="_blank"><strong><u> PETPATU.COM</u></strong></a>
+                </span>
+            </div>
+            <div class="coupon-body">
+                <div class="coupon-code-box" onclick="copyCode('SCOFIELD5')">
+                    <span class="code-text" id="coupon-code">SCOFIELD5</span>
+                    <div class="copy-area">
+                        <span>Copiar</span>
+                        <i data-lucide="copy" size="18"></i>
+                    </div>
+                </div>
+                <br>
+                <span>5% de Desconto em toda a loja PetPatu.com</span>
+            </div>
+        </section> -->
+
+        <footer class="footer">
+            </br>
+            <p>Criado com elegância para o Scofield 🐾 &copy; 2026</p>
+        </footer>
+
+    </main>
 </div>
+
+<script>
+    lucide.createIcons();
+
+    function copyCode(text) {
+        navigator.clipboard.writeText(text);
+        const toast = document.getElementById('copy-toast');
+        toast.style.display = 'block';
+        setTimeout(() => {
+            toast.style.display = 'none';
+        }, 3000);
+    }
+</script>
 
 </body>
 </html>
-
